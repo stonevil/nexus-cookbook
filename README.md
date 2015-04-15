@@ -1,3 +1,10 @@
+[![Build Status](https://secure.travis-ci.org/stonevil/nexus-cookbook.png?branch=master)](https://travis-ci.org/stonevil/nexus-cookbook)
+
+[![Code Climate](https://codeclimate.com/github/stonevil/nexus-cookbook/badges/gpa.svg)](https://codeclimate.com/github/stonevil/nexus-cookbook)
+
+[![Stories in Ready](https://badge.waffle.io/stonevil/nexus-cookbook.png?label=ready&title=Ready)](https://waffle.io/stonevil/nexus-cookbook)
+
+
 Description
 ===========
 
@@ -6,7 +13,7 @@ Installs and configures Sonatype Nexus. Can optionally configure and install an 
 Requirements
 ============
 
-Platform: 
+Platform:
 
 * Debian 7.8
 * Ubuntu 12.04, 14.04
@@ -39,12 +46,12 @@ Simply add the `nexus::default` recipe to the node where you want Sonatype Nexus
 Data Bags
 =========
 
-As of version 3.x, this cookbook now uses fewer, more standardised Encrypted Data Bags. Following the style used at Riot, Data bags are created per Chef Environment and default to a data bag item named "_wildcard" if there is no environmental data bag item. 
+As of version 3.x, this cookbook now uses fewer, more standardised Encrypted Data Bags. Following the style used at Riot, Data bags are created per Chef Environment and default to a data bag item named "_wildcard" if there is no environmental data bag item.
 
 For version 3.x, the data bag has been revised to only include the credentials, and license elements.
 
 Below is how you should create your data bags for using this cookbook:
-    
+
     knife data bag create nexus _wildcard -c your/chef/config --secret-file your/encrypted_data_bag_key
 
     {
@@ -105,7 +112,7 @@ Action  | Description              | Default
 ------- |-------------             |---------
 create  | Creates a new repository | Yes
 delete  | Deletes a repository     |
-update  | Updates a repository     | 
+update  | Updates a repository     |
 
 ### Attributes
 Attribute        | Description                                                         | Type                  | Default
@@ -141,7 +148,7 @@ Resource provider for creating, deleting, and modifying Nexus user accounts.
 Action          | Description                                    | Default
 -------         |-------------                                   |---------
 create          | Creates a new Nexus user.                      | Yes
-delete          | Deletes a Nexus user.                          | 
+delete          | Deletes a Nexus user.                          |
 update          | Updates a Nexus user with updated information  |
 change_password | Changes a Nexus user's password                |
 
@@ -159,7 +166,7 @@ roles        | A list of roles (permissions) to apply to the user.      | Array 
 
 ## nexus\_license
 
-Resource provider for installing a license file into Nexus. 
+Resource provider for installing a license file into Nexus.
 
 ### Actions
 Action   | Description                                       | Default
@@ -179,9 +186,9 @@ Resource provider for manipulating the Nexus' settings for Smart Proxy.
 Action              | Description                                    | Default
 -------             |-------------                                   |---------
 enable              | Enables the Smart Proxy functionality.         | Yes
-disable             | Disables the Smart Proxy functionality.        | 
-add_trusted_key     | Adds a trusted key to the server.              | 
-delete_trusted_key  | Removes a trusted key from the server.         | 
+disable             | Disables the Smart Proxy functionality.        |
+add_trusted_key     | Adds a trusted key to the server.              |
+delete_trusted_key  | Removes a trusted key from the server.         |
 
 
 ### Attributes

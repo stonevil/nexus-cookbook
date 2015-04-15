@@ -1,5 +1,26 @@
 language: ruby
-script: "gem install foodcritic && foodcritic -f any ."
-script: "gem install tailor && tailor"
 rvm:
   - 2.1.4
+
+cache:
+  - bundler
+  - apt
+
+env:
+  - BERKSHELF_PATH=/tmp/
+
+before_install:
+  - sudo apt-get update -qq
+  - curl -L https://www.chef.io/chef/install.sh | sudo bash
+  - rm -Rf .bundle
+
+install:
+  - bundle install
+  - bundle exec berks vendor /tmp/cookbooks
+  - cp dummy-validation.pem /tmp/validation.pem
+  - cp dna.json /tmp/dna.json
+
+script:
+  - bundle exec foodcritic -f any .
+  - bundle exec tailor
+  - chef-client -z -c client.rb -j dna.json

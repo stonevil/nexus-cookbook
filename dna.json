@@ -1,11 +1,15 @@
 {
-  "nexus": {
-    "cli":{
-      "ssl":"verify"
-    },
-    "use_self_signed":"true"
-  },
-  "run_list":[
-    "nexus"
-  ]
+  "normal": {
+    "nexus": {
+      "cli": {
+        "ssl": {
+          "verify": "true"
+         }
+       },
+       "use_self_signed":"true"
+    }
+   },
+   "run_list":[
+     "nexus"
+   ]
 }

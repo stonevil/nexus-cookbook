@@ -1,15 +1,1 @@
-{
-  "normal": {
-    "nexus": {
-      "cli": {
-        "ssl": {
-          "verify": "true"
-         }
-       },
-       "use_self_signed":"true"
-    }
-   },
-   "run_list":[
-     "nexus"
-   ]
-}
+{"nexus":{"cli":{"ssl":{"verify":false}},"app_server_proxy":{"use_self_signed":true}},"run _list":["recipe[nexus]"]}

@@ -28,4 +28,6 @@ group :development do
   gem 'guard-minitest'
   gem 'guard-bundler'
   gem 'terminal-notifier-guard'
+
+  gem 'hubrelease'
 end

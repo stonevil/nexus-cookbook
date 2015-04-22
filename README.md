@@ -1,4 +1,8 @@
-[![Build Status](https://secure.travis-ci.org/stonevil/nexus-cookbook.png?branch=master)](https://travis-ci.org/stonevil/nexus-cookbook)
+[![Travis-CI Build Status](https://secure.travis-ci.org/stonevil/nexus-cookbook.png?branch=master)](https://travis-ci.org/stonevil/nexus-cookbook)
+[![Drone.io Build Status](https://drone.io/github.com/stonevil/nexus-cookbook/status.png)](https://drone.io/github.com/stonevil/nexus-cookbook/latest)
+
+`A lot building system just for fun and testing integration`
+
 
 [![Code Climate](https://codeclimate.com/github/stonevil/nexus-cookbook/badges/gpa.svg)](https://codeclimate.com/github/stonevil/nexus-cookbook)
 

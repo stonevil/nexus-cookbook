@@ -2,10 +2,6 @@ language: ruby
 rvm:
   - 2.1.4
 
-cache:
-  - bundler
-  - apt
-
 env:
   - BERKSHELF_PATH=/tmp/
 
